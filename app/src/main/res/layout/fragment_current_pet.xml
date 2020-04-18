@@ -5,7 +5,8 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp">
+    android:padding="16dp"
+    android:id="@+id/current_pet_container">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/current_pet_image_card"
@@ -31,7 +32,9 @@
                 android:layout_weight="9"
                 android:contentDescription="@string/app_name"
                 android:scaleType="fitXY"
-                android:background="@color/colorPrimary">
+                android:background="@color/colorPrimary"
+                android:src="@mipmap/ic_launcher"
+                android:transitionName="petProfileTransition">
             </ImageView>
 
             <TextView
@@ -49,8 +52,6 @@
             </TextView>
 
         </LinearLayout>
-
-
 
     </androidx.cardview.widget.CardView>
 
