@@ -10,7 +10,8 @@ import androidx.lifecycle.ViewModelProvider
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.fragment_current_pet.*
 import meehan.matthew.petfindr.R
-import meehan.matthew.petfindr.base.BaseApp
+import meehan.matthew.petfindr.application.BaseApp
+import meehan.matthew.petfindr.databinding.FragmentCurrentPetBinding
 import meehan.matthew.petfindr.viewModel.CurrentPetViewModel
 import meehan.matthew.petfindr.dependencyInjection.ViewModelFactory
 import meehan.matthew.petfindr.model.remote.AnimalsItemResponse
@@ -39,7 +40,12 @@ class CurrentPetFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_current_pet, container, false)
+        val binding = FragmentCurrentPetBinding.inflate(inflater, container, false)
+        binding.apply {
+            lifecycleOwner = this@CurrentPetFragment
+            viewmodel = this@CurrentPetFragment.viewModel
+        }
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -70,11 +76,11 @@ class CurrentPetFragment : Fragment() {
     }
 
     private fun attachObservers() {
-        viewModel.currentPet.observe(this, Observer {
+        /*viewModel.currentPet.observe(this, Observer {
             it?.let {
                 displayCardDetails(it)
             }
-        })
+        })*/
     }
 
     private fun displayCardDetails(currentPet: AnimalsItemResponse) {

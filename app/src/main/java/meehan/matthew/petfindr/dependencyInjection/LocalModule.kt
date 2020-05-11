@@ -2,12 +2,11 @@ package meehan.matthew.petfindr.dependencyInjection
 
 import android.app.Application
 import android.content.Context
-import android.preference.PreferenceManager
 import android.content.SharedPreferences
 import dagger.Module
 import javax.inject.Singleton
 import dagger.Provides
-import meehan.matthew.petfindr.base.EnvironmentConstants
+import meehan.matthew.petfindr.utils.EnvironmentConstants
 
 @Module
 class LocalModule {

@@ -13,7 +13,7 @@ import dagger.Lazy
 import meehan.matthew.petfindr.network.NetworkConstants
 import meehan.matthew.petfindr.data.remote.PetApiService
 import meehan.matthew.petfindr.network.AuthInterceptor
-import meehan.matthew.petfindr.repository.PetRepository
+import meehan.matthew.petfindr.repository.CurrentPetRepository
 import java.util.concurrent.TimeUnit
 
 @Module
@@ -29,8 +29,8 @@ class NetworkModule {
 
     @Provides
     @Singleton
-    fun provideAuthInterceptor(repository: Lazy<PetRepository>): AuthInterceptor {
-        return AuthInterceptor(repository)
+    fun provideAuthInterceptor(currentPetRepository: Lazy<CurrentPetRepository>): AuthInterceptor {
+        return AuthInterceptor(currentPetRepository)
     }
 
     @Provides
