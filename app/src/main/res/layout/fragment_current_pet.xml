@@ -40,7 +40,7 @@
                     android:background="@color/colorPrimary"
                     android:transitionName="petProfileTransition"
                     tools:src="@mipmap/ic_launcher"
-                    app:remoteImageUrl="@{viewmodel.currentPetPhoto}">
+                    app:remoteImageUrl="@{viewmodel.currentPet.photoUrl}">
                 </ImageView>
 
                 <TextView
@@ -52,7 +52,7 @@
                     android:gravity="center_vertical"
                     android:textAppearance="@style/TextAppearance.AppCompat.Large"
                     android:textColor="@android:color/black"
-                    android:text="@{viewmodel.currentPetDescription}"
+                    android:text="@{viewmodel.currentPet.quickDescription}"
                     android:ellipsize="end"
                     android:maxLines="1"
                     tools:text="@string/app_name">
@@ -74,7 +74,8 @@
             app:layout_constraintVertical_weight="15"
             app:layout_constraintHorizontal_weight="1"
             app:cb_color="#FF2A26"
-            android:layout_marginTop="16dp">
+            android:layout_marginTop="16dp"
+            android:onClick="@{() -> viewmodel.getNextPet()}">
         </at.markushi.ui.CircleButton>
 
         <at.markushi.ui.CircleButton
@@ -89,7 +90,8 @@
             app:layout_constraintVertical_weight="15"
             app:layout_constraintHorizontal_weight="1"
             app:cb_color="#99CC00"
-            android:layout_marginTop="16dp">
+            android:layout_marginTop="16dp"
+            android:onClick="@{() -> viewmodel.getNextPet()}">
         </at.markushi.ui.CircleButton>
 
     </androidx.constraintlayout.widget.ConstraintLayout>

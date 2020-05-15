@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">petfindr</string>
+    <string name="distance">Miles</string>
 </resources>

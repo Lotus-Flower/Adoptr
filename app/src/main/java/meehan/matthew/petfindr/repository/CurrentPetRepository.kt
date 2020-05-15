@@ -5,8 +5,11 @@ import meehan.matthew.petfindr.data.local.SavedPetsLocalService
 import meehan.matthew.petfindr.data.local.TokenLocalService
 import meehan.matthew.petfindr.network.NetworkConstants
 import meehan.matthew.petfindr.data.remote.PetApiService
+import meehan.matthew.petfindr.model.local.PetListModel
+import meehan.matthew.petfindr.model.local.PetModel
 import meehan.matthew.petfindr.model.remote.AuthResponse
 import meehan.matthew.petfindr.model.remote.PetResponse
+import meehan.matthew.petfindr.utils.CoroutineUtil
 import retrofit2.Response
 import javax.inject.Inject
 
@@ -27,20 +30,22 @@ class CurrentPetRepository @Inject constructor(private val petApiService: PetApi
         get() = savedPetsLocalService.getData()
         set(value) = savedPetsLocalService.setData(value)
 
-    suspend fun refreshAuthToken() : Response<AuthResponse> {
-        return petApiService.getAuthToken(
-            NetworkConstants.GRANT_TYPE_VALUE,
-            NetworkConstants.CLIENT_ID_VALUE,
-            NetworkConstants.CLIENT_SECRET_VALUE
-        )
+    suspend fun refreshAuthToken() : AuthResponse? {
+        return CoroutineUtil.makeNetworkCall {
+            petApiService.getAuthToken(
+                NetworkConstants.GRANT_TYPE_VALUE,
+                NetworkConstants.CLIENT_ID_VALUE,
+                NetworkConstants.CLIENT_SECRET_VALUE
+            )
+        }
     }
 
-    suspend fun getPets() : Response<PetResponse> {
+    suspend fun getPets() : PetListModel? {
         return getPets(null)
     }
 
-    suspend fun getPets(page: String?) : Response<PetResponse> {
-        return petApiService.getPets(NetworkConstants.BEARER + authToken.orEmpty(), page)
+    suspend fun getPets(page: String?) : PetListModel? {
+        return PetListModel.convertFromResponse(CoroutineUtil.makeNetworkCall { petApiService.getPets(NetworkConstants.BEARER + authToken.orEmpty(), page) })
     }
 
 }

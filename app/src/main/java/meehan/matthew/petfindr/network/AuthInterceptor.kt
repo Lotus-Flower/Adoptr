@@ -18,8 +18,8 @@ class AuthInterceptor (private val currentPetRepository: Lazy<CurrentPetReposito
                     currentPetRepository.get().refreshAuthToken()
                 }
 
-                if (authResponse.isSuccessful) {
-                    val token = (authResponse.body() as AuthResponse).accessToken
+                authResponse?.let {
+                    val token = it.accessToken
 
                     currentPetRepository.get().authToken = token
 
