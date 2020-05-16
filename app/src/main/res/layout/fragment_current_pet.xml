@@ -91,7 +91,7 @@
             app:layout_constraintHorizontal_weight="1"
             app:cb_color="#99CC00"
             android:layout_marginTop="16dp"
-            android:onClick="@{() -> viewmodel.getNextPet()}">
+            android:onClick="@{() -> viewmodel.savePet(viewmodel.currentPet.id)}">
         </at.markushi.ui.CircleButton>
 
     </androidx.constraintlayout.widget.ConstraintLayout>

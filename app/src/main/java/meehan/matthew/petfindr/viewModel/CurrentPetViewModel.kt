@@ -51,6 +51,13 @@ class CurrentPetViewModel @Inject constructor(private val currentPetRepository: 
         }
     }
 
+    fun savePet(id: String) {
+        val savedPets = currentPetRepository.savedPets
+        savedPets?.add(id)
+        currentPetRepository.savedPets = savedPets
+        getNextPet()
+    }
+
     private fun filterPets(petListModel: PetListModel) {
         petList = petListModel.petList.filter {
              it.photoUrl.isNotEmpty() && it.name.isNotEmpty()

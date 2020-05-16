@@ -18,27 +18,16 @@ class CurrentPetRepository @Inject constructor(private val petApiService: PetApi
                                                private val allPetsLocalService: AllPetsLocalService,
                                                private val savedPetsLocalService: SavedPetsLocalService) {
 
-    var authToken: String?
+    private val authToken: String?
         get() = tokenLocalService.getData()
-        set(value) = tokenLocalService.setData(value)
 
-    var allPets: Set<String>?
+    var allPets: MutableSet<String>?
         get() = allPetsLocalService.getData()
         set(value) = allPetsLocalService.setData(value)
 
-    var savedPets: Set<String>?
+    var savedPets: MutableSet<String>?
         get() = savedPetsLocalService.getData()
         set(value) = savedPetsLocalService.setData(value)
-
-    suspend fun refreshAuthToken() : AuthResponse? {
-        return CoroutineUtil.makeNetworkCall {
-            petApiService.getAuthToken(
-                NetworkConstants.GRANT_TYPE_VALUE,
-                NetworkConstants.CLIENT_ID_VALUE,
-                NetworkConstants.CLIENT_SECRET_VALUE
-            )
-        }
-    }
 
     suspend fun getPets() : PetListModel? {
         return getPets(null)

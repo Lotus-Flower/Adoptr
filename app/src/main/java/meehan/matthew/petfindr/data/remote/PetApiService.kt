@@ -1,7 +1,9 @@
 package meehan.matthew.petfindr.data.remote
 
+import meehan.matthew.petfindr.model.remote.AnimalsItemResponse
 import meehan.matthew.petfindr.model.remote.PetResponse
 import meehan.matthew.petfindr.model.remote.AuthResponse
+import meehan.matthew.petfindr.model.remote.SingleAnimalResponse
 import meehan.matthew.petfindr.network.NetworkConstants
 import retrofit2.Response
 import retrofit2.http.*
@@ -17,5 +19,8 @@ interface PetApiService {
 
     @GET("animals")
     suspend fun getPets(@Header(NetworkConstants.AUTHORIZATION_HEADER) token: String, @Query(NetworkConstants.PAGE) page: String?) : Response<PetResponse>
+
+    @GET("animals/{id}")
+    suspend fun getPetById(@Header(NetworkConstants.AUTHORIZATION_HEADER) token: String, @Path(NetworkConstants.ID) id: String?) : Response<SingleAnimalResponse>
 
 }

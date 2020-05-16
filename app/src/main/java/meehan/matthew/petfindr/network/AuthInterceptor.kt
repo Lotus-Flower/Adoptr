@@ -4,10 +4,11 @@ import dagger.Lazy
 import kotlinx.coroutines.runBlocking
 import meehan.matthew.petfindr.model.remote.AuthResponse
 import meehan.matthew.petfindr.repository.CurrentPetRepository
+import meehan.matthew.petfindr.repository.TokenRepository
 import okhttp3.Interceptor
 import okhttp3.Response
 
-class AuthInterceptor (private val currentPetRepository: Lazy<CurrentPetRepository>) : Interceptor {
+class AuthInterceptor (private val tokenRepository: Lazy<TokenRepository>) : Interceptor {
     override fun intercept(chain: Interceptor.Chain): Response {
         val request = chain.request()
         var response = chain.proceed(chain.request())
@@ -15,13 +16,13 @@ class AuthInterceptor (private val currentPetRepository: Lazy<CurrentPetReposito
         when (response.code()) {
             401, 403 -> {
                 val authResponse = runBlocking {
-                    currentPetRepository.get().refreshAuthToken()
+                    tokenRepository.get().refreshAuthToken()
                 }
 
                 authResponse?.let {
                     val token = it.accessToken
 
-                    currentPetRepository.get().authToken = token
+                    tokenRepository.get().authToken = token
 
                     token?.let {
 

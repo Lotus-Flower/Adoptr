@@ -15,6 +15,13 @@ data class PetResponse(
 	val animals: List<AnimalsItemResponse?>? = null
 )
 
+data class SingleAnimalResponse(
+
+	@field:SerializedName("animal")
+	val animal: AnimalsItemResponse? = null
+
+)
+
 data class AnimalsItemResponse(
 
 	@field:SerializedName("gender")

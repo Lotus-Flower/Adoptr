@@ -14,6 +14,7 @@ import meehan.matthew.petfindr.network.NetworkConstants
 import meehan.matthew.petfindr.data.remote.PetApiService
 import meehan.matthew.petfindr.network.AuthInterceptor
 import meehan.matthew.petfindr.repository.CurrentPetRepository
+import meehan.matthew.petfindr.repository.TokenRepository
 import java.util.concurrent.TimeUnit
 
 @Module
@@ -29,8 +30,8 @@ class NetworkModule {
 
     @Provides
     @Singleton
-    fun provideAuthInterceptor(currentPetRepository: Lazy<CurrentPetRepository>): AuthInterceptor {
-        return AuthInterceptor(currentPetRepository)
+    fun provideAuthInterceptor(tokenRepository: Lazy<TokenRepository>): AuthInterceptor {
+        return AuthInterceptor(tokenRepository)
     }
 
     @Provides
