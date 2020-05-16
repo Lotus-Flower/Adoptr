@@ -6,7 +6,11 @@ import androidx.recyclerview.widget.RecyclerView
 import meehan.matthew.petfindr.databinding.ViewHolderSavedPetsBinding
 import meehan.matthew.petfindr.model.local.PetModel
 
-class SavedPetsAdapter(val savedPetsList: MutableList<PetModel?>) : RecyclerView.Adapter<SavedPetsAdapter.SavedPetsViewHolder>() {
+class SavedPetsAdapter(private val savedPetsList: MutableList<PetModel?>) : RecyclerView.Adapter<SavedPetsAdapter.SavedPetsViewHolder>() {
+
+    init {
+        savedPetsList.sortBy { it?.name }
+    }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SavedPetsViewHolder {
         return SavedPetsViewHolder(ViewHolderSavedPetsBinding.inflate(LayoutInflater.from(parent.context), parent, false))

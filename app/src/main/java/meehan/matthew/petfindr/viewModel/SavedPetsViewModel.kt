@@ -22,14 +22,20 @@ class SavedPetsViewModel @Inject constructor(private val savedPetRepository: Sav
         }
 
     fun getPetsByIds() {
-        viewModelScope.launch {
-            savedPets?.map {
-                async(Dispatchers.IO) {
-                    savedPetsList.value?.add(savedPetRepository.getPetById(it))
-                }
-            }?.awaitAll()
 
-            savedPetsList.value = savedPetsList.value?.distinct()?.toMutableList()
+        if (!savedPetsList.value.orEmpty().map { it?.id }.containsAll(savedPets.orEmpty())) {
+
+            viewModelScope.launch {
+                savedPets?.map {
+                    async(Dispatchers.IO) {
+                        savedPetsList.value?.add(savedPetRepository.getPetById(it))
+                    }
+                }?.awaitAll()
+
+                savedPetsList.value = savedPetsList.value?.distinct()?.toMutableList()
+            }
+
         }
+
     }
 }
