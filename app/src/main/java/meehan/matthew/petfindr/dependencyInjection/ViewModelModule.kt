@@ -5,6 +5,7 @@ import dagger.Binds
 import dagger.Module
 import dagger.multibindings.IntoMap
 import meehan.matthew.petfindr.viewModel.CurrentPetViewModel
+import meehan.matthew.petfindr.viewModel.PetDetailsViewModel
 import meehan.matthew.petfindr.viewModel.SavedPetsViewModel
 
 @Module
@@ -18,4 +19,10 @@ abstract class ViewModelModule {
     @IntoMap
     @ViewModelKey(SavedPetsViewModel::class)
     abstract fun bindSavesPetsViewModel(savedPetsViewModel: SavedPetsViewModel): ViewModel
+
+    @Binds
+    @IntoMap
+    @ViewModelKey(PetDetailsViewModel::class)
+    abstract fun bindPetDetailsViewModel(petDetailsViewModel: PetDetailsViewModel) : ViewModel
+
 }

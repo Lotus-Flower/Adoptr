@@ -1,7 +1,6 @@
 package meehan.matthew.petfindr.model.remote
 
 import com.google.gson.annotations.SerializedName
-import meehan.matthew.petfindr.model.local.Links
 import com.google.gson.annotations.Expose
 
 

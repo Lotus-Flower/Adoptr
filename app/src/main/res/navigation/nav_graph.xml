@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/nav_graph"
+    app:startDestination="@id/currentPetFragment">
+
+    <fragment
+        android:id="@+id/currentPetFragment"
+        android:name="meehan.matthew.petfindr.view.CurrentPetFragment"
+        android:label="CurrentPetFragment" >
+        <action
+            android:id="@+id/action_currentPetFragment_to_petDetailFragment"
+            app:destination="@id/petDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/petDetailFragment"
+        android:name="meehan.matthew.petfindr.view.PetDetailsFragment"
+        android:label="PetDetailFragment" >
+        <argument
+            android:name="currentPetModel"
+            app:argType="meehan.matthew.petfindr.model.local.PetModel" />
+    </fragment>
+    <fragment
+        android:id="@+id/savedPetsFragment"
+        android:name="meehan.matthew.petfindr.view.SavedPetsFragment"
+        android:label="SavedPetsFragment" >
+        <action
+            android:id="@+id/action_savedPetsFragment_to_petDetailFragment"
+            app:destination="@id/petDetailFragment" />
+    </fragment>
+</navigation>

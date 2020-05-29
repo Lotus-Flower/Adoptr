@@ -1,14 +1,12 @@
 package meehan.matthew.petfindr.viewModel
 
-import androidx.lifecycle.*
+import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.launch
-import meehan.matthew.petfindr.model.local.Pet
 import meehan.matthew.petfindr.model.local.PetListModel
 import meehan.matthew.petfindr.model.local.PetModel
-import meehan.matthew.petfindr.model.remote.AnimalsItemResponse
-import meehan.matthew.petfindr.model.remote.PetResponse
 import meehan.matthew.petfindr.repository.CurrentPetRepository
-import meehan.matthew.petfindr.utils.StringHelper
 import meehan.matthew.petfindr.utils.UrlHelper
 import javax.inject.Inject
 
@@ -20,7 +18,11 @@ class CurrentPetViewModel @Inject constructor(private val currentPetRepository: 
 
     val currentPet = MutableLiveData<PetModel>()
 
-    fun getPets() {
+    init {
+        getPets()
+    }
+
+    private fun getPets() {
         viewModelScope.launch {
             val response =
                 when (nextListLink) {

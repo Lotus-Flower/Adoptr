@@ -38,7 +38,7 @@
                     android:contentDescription="@string/app_name"
                     android:scaleType="fitXY"
                     android:background="@color/colorPrimary"
-                    android:transitionName="petProfileTransition"
+                    android:transitionName="@{viewmodel.currentPet.photoUrl}"
                     tools:src="@mipmap/ic_launcher"
                     app:remoteImageUrl="@{viewmodel.currentPet.photoUrl}">
                 </ImageView>

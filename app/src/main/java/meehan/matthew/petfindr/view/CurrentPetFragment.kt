@@ -6,6 +6,12 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.findNavController
+import androidx.navigation.fragment.FragmentNavigatorExtras
+import androidx.navigation.fragment.findNavController
+import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.fragment_current_pet.*
+import meehan.matthew.petfindr.R
 import meehan.matthew.petfindr.application.BaseApp
 import meehan.matthew.petfindr.databinding.FragmentCurrentPetBinding
 import meehan.matthew.petfindr.dependencyInjection.ViewModelFactory
@@ -40,9 +46,20 @@ class CurrentPetFragment : Fragment() {
         return binding.root
     }
 
-    override fun onStart() {
-        super.onStart()
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
 
-        viewModel.getPets()
+        current_pet_image_card.setOnClickListener {
+            navigateToPetDetails()
+        }
+    }
+
+    private fun navigateToPetDetails() {
+        viewModel.currentPet.value?.let {
+            val extras = FragmentNavigatorExtras(
+                current_pet_image_view to it.photoUrl
+            )
+            findNavController().navigate(CurrentPetFragmentDirections.actionCurrentPetFragmentToPetDetailFragment(it), extras)
+        }
     }
 }

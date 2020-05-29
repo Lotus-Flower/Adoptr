@@ -1,4 +1,9 @@
 <resources>
-    <string name="app_name">petfindr</string>
+    <string name="app_name">adoptr</string>
     <string name="distance">Miles</string>
+    <string name="breed">Breed</string>
+    <string name="physical_characteristics">Physical Characteristics</string>
+    <string name="health">Health</string>
+    <string name="behavioral_characteristics">Behavioral Characteristics</string>
+    <string name="contact_info">Contact Information</string>
 </resources>
