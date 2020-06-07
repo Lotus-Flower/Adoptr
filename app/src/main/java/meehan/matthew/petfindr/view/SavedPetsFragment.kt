@@ -60,19 +60,26 @@ class SavedPetsFragment : Fragment() {
             setHasFixedSize(true)
             layoutManager = linearLayoutManager
             addItemDecoration(DividerItemDecoration(this.context, linearLayoutManager.orientation))
+            postponeEnterTransition()
+            viewTreeObserver.addOnDrawListener {
+                startPostponedEnterTransition()
+            }
+            adapter = SavedPetsAdapter(mutableListOf(), { petModel, imageView ->
+                val extras = FragmentNavigatorExtras(
+                    imageView to (petModel?.photoUrl ?: "")
+                )
+                navigateToPetDetails(petModel, extras)
+            }, {
+                viewModel.removePet(it)
+            })
         }
 
         attachObservers()
     }
 
     private fun attachObservers() {
-        viewModel.savedPetsList.observe(this, Observer { petList ->
-            saved_pets_recycler.adapter = SavedPetsAdapter(petList) { petModel: PetModel?, imageView: ImageView ->
-                val extras = FragmentNavigatorExtras(
-                    imageView to (petModel?.photoUrl ?: "")
-                )
-                navigateToPetDetails(petModel, extras)
-            }
+        viewModel.savedPetsList.observe(this, Observer {
+            (saved_pets_recycler.adapter as SavedPetsAdapter).update(it)
         })
     }
 

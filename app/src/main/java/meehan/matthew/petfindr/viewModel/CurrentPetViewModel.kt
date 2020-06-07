@@ -7,6 +7,7 @@ import kotlinx.coroutines.launch
 import meehan.matthew.petfindr.model.local.PetListModel
 import meehan.matthew.petfindr.model.local.PetModel
 import meehan.matthew.petfindr.repository.CurrentPetRepository
+import meehan.matthew.petfindr.utils.SingleLiveEvent
 import meehan.matthew.petfindr.utils.UrlHelper
 import javax.inject.Inject
 
@@ -17,6 +18,10 @@ class CurrentPetViewModel @Inject constructor(private val currentPetRepository: 
     private var petList: List<PetModel?> = listOf()
 
     val currentPet = MutableLiveData<PetModel>()
+
+    var detailsViewClickedObservable = SingleLiveEvent<Boolean>()
+        private set
+
 
     init {
         getPets()
@@ -43,7 +48,10 @@ class CurrentPetViewModel @Inject constructor(private val currentPetRepository: 
         }
     }
 
-    fun getNextPet() {
+    fun getNextPet(id: String) {
+
+        addPetToAllPets(id)
+
         if (currentPetIndex + 1 >= petList.size) {
             currentPetIndex = 0
             getPets()
@@ -57,12 +65,22 @@ class CurrentPetViewModel @Inject constructor(private val currentPetRepository: 
         val savedPets = currentPetRepository.savedPets
         savedPets?.add(id)
         currentPetRepository.savedPets = savedPets
-        getNextPet()
+        getNextPet(id)
+    }
+
+    fun navigateToPetDetails() {
+        detailsViewClickedObservable.value = true
     }
 
     private fun filterPets(petListModel: PetListModel) {
         petList = petListModel.petList.filter {
-             it.photoUrl.isNotEmpty() && it.name.isNotEmpty()
+            (!(currentPetRepository.allPets?.contains(it.id) ?: true)) && it.photoUrl.isNotEmpty() && it.name.isNotEmpty()
         }
+    }
+
+    private fun addPetToAllPets(id: String) {
+        val updatedList = currentPetRepository.allPets
+        updatedList?.add(id)
+        currentPetRepository.allPets = updatedList
     }
 }

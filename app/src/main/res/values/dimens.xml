@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="saved_pets_vh_card_height">100dp</dimen>
-    <dimen name="saved_pets_vh_image_margin">8dp</dimen>
-    <dimen name="saved_pets_vh_top_margin">2dp</dimen>
+    <dimen name="element_med_height">100dp</dimen>
+    <dimen name="small_margin">8dp</dimen>
+    <dimen name="mini_margin">2dp</dimen>
 </resources>

@@ -17,6 +17,7 @@
             android:id="@+id/current_pet_image_card"
             android:layout_width="match_parent"
             android:layout_height="0dp"
+            android:onClick="@{() -> viewmodel.navigateToPetDetails()}"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -75,7 +76,7 @@
             app:layout_constraintHorizontal_weight="1"
             app:cb_color="#FF2A26"
             android:layout_marginTop="16dp"
-            android:onClick="@{() -> viewmodel.getNextPet()}">
+            android:onClick="@{() -> viewmodel.getNextPet(viewmodel.currentPet.id)}">
         </at.markushi.ui.CircleButton>
 
         <at.markushi.ui.CircleButton

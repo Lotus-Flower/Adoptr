@@ -5,13 +5,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import androidx.navigation.findNavController
 import androidx.navigation.fragment.FragmentNavigatorExtras
 import androidx.navigation.fragment.findNavController
-import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.fragment_current_pet.*
-import meehan.matthew.petfindr.R
 import meehan.matthew.petfindr.application.BaseApp
 import meehan.matthew.petfindr.databinding.FragmentCurrentPetBinding
 import meehan.matthew.petfindr.dependencyInjection.ViewModelFactory
@@ -49,9 +47,13 @@ class CurrentPetFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        current_pet_image_card.setOnClickListener {
+        attachObservers()
+    }
+
+    private fun attachObservers() {
+        viewModel.detailsViewClickedObservable.observe(this, Observer {
             navigateToPetDetails()
-        }
+        })
     }
 
     private fun navigateToPetDetails() {

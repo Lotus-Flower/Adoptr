@@ -38,4 +38,11 @@ class SavedPetsViewModel @Inject constructor(private val savedPetRepository: Sav
         }
 
     }
+
+    fun removePet(petModel: PetModel?) {
+        val updatedList = savedPetsList.value
+        updatedList?.remove(petModel)
+        savedPetsList.value = updatedList
+        savedPets = savedPetsList.value?.mapNotNull { it?.id }?.toMutableSet()
+    }
 }
