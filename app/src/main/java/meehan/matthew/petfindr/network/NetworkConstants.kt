@@ -15,6 +15,6 @@ object NetworkConstants {
     const val ID = "id"
 
     const val GRANT_TYPE_VALUE = "client_credentials"
-    const val CLIENT_ID_VALUE  = "lXVpgVyLsX6CWzjLbwL52IOZ8QcKuJPSi1rkAvBIYJ0tFJVXLd"
-    const val CLIENT_SECRET_VALUE = "IU3A9miNV424gJJeEnTACbrdD8dEfJB2dq5O1OrW"
+    const val CLIENT_ID_VALUE  = ""
+    const val CLIENT_SECRET_VALUE = ""
 }
