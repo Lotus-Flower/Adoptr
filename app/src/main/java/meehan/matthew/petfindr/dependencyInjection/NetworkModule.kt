@@ -1,21 +1,20 @@
 package meehan.matthew.petfindr.dependencyInjection
 
+import com.google.gson.FieldNamingPolicy
 import com.google.gson.Gson
+import com.google.gson.GsonBuilder
+import dagger.Lazy
 import dagger.Module
-import javax.inject.Singleton
 import dagger.Provides
+import meehan.matthew.petfindr.data.remote.api.PetApiService
+import meehan.matthew.petfindr.network.AuthInterceptor
+import meehan.matthew.petfindr.network.NetworkConstants
+import meehan.matthew.petfindr.repository.TokenRepository
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
-import com.google.gson.FieldNamingPolicy
-import com.google.gson.GsonBuilder
-import dagger.Lazy
-import meehan.matthew.petfindr.network.NetworkConstants
-import meehan.matthew.petfindr.data.remote.PetApiService
-import meehan.matthew.petfindr.network.AuthInterceptor
-import meehan.matthew.petfindr.repository.CurrentPetRepository
-import meehan.matthew.petfindr.repository.TokenRepository
 import java.util.concurrent.TimeUnit
+import javax.inject.Singleton
 
 @Module
 class NetworkModule {

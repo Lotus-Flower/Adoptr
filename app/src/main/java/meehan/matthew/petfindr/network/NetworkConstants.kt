@@ -2,7 +2,7 @@ package meehan.matthew.petfindr.network
 
 object NetworkConstants {
     private const val PET_API_VERSION = "/v2/"
-    const val PET_BASE_ENDPOINT = "https://api.petfinder.com/v2/"
+    const val PET_BASE_ENDPOINT = "https://api.petfinder.com$PET_API_VERSION"
 
     const val AUTHORIZATION_HEADER = "Authorization"
     const val BEARER = "Bearer "

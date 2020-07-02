@@ -5,7 +5,6 @@ import dagger.Module
 import javax.inject.Singleton
 import dagger.Provides
 
-
 @Module
 class AppModule(var mApplication: Application) {
 

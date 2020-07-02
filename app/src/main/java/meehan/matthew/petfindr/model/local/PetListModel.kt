@@ -3,6 +3,7 @@ package meehan.matthew.petfindr.model.local
 import android.os.Parcel
 import android.os.Parcelable
 import meehan.matthew.petfindr.model.remote.*
+import meehan.matthew.petfindr.utils.ModelConverter
 import meehan.matthew.petfindr.utils.StringHelper
 
 data class PetListModel(
@@ -17,7 +18,7 @@ data class PetListModel(
         parcel.createTypedArrayList(PetModel.CREATOR).orEmpty()
     )
 
-    companion object {
+    companion object : ModelConverter<PetListModel, PetResponse?> {
 
         @JvmField val CREATOR : Parcelable.Creator<PetListModel> = object : Parcelable.Creator<PetListModel> {
             override fun createFromParcel(parcel: Parcel): PetListModel {
@@ -29,10 +30,10 @@ data class PetListModel(
             }
         }
 
-        fun convertFromResponse(petResponse: PetResponse?) : PetListModel {
+        override fun convertFromResponse(from: PetResponse?) : PetListModel {
             return PetListModel(
-                next = petResponse?.pagination?.links?.next?.href ?: "",
-                petList = petResponse?.animals?.map {
+                next = from?.pagination?.links?.next?.href ?: "",
+                petList = from?.animals?.map {
                     PetModel.convertFromResponse(it)
                 } ?: listOf()
             )
@@ -55,10 +56,10 @@ data class SingleAnimalModel(
     var pet: PetModel
 
 ) {
-    companion object {
-        fun convertFromResponse(singleAnimalResponse: SingleAnimalResponse?) : SingleAnimalModel {
+    companion object : ModelConverter<SingleAnimalModel, SingleAnimalResponse?> {
+        override fun convertFromResponse(from: SingleAnimalResponse?) : SingleAnimalModel {
             return SingleAnimalModel(
-                PetModel.convertFromResponse(singleAnimalResponse?.animal)
+                PetModel.convertFromResponse(from?.animal)
             )
         }
     }
@@ -124,7 +125,7 @@ data class PetModel(
         parcel.readString().toString()
     )
 
-    companion object {
+    companion object : ModelConverter<PetModel, AnimalsItemResponse?> {
 
         @JvmField val CREATOR : Parcelable.Creator<PetModel> = object : Parcelable.Creator<PetModel> {
             override fun createFromParcel(parcel: Parcel): PetModel {
@@ -136,26 +137,26 @@ data class PetModel(
             }
         }
 
-        fun convertFromResponse(animalsItemResponse: AnimalsItemResponse?) : PetModel {
+        override fun convertFromResponse(from: AnimalsItemResponse?) : PetModel {
             return PetModel(
-                gender = animalsItemResponse?.gender ?: "",
-                distance = animalsItemResponse?.distance.toString(),
-                links = LinkModel.convertFromResponse(animalsItemResponse?.links),
-                description = animalsItemResponse?.description ?: "",
-                type = animalsItemResponse?.type ?: "",
-                photoUrl = animalsItemResponse?.photos?.firstOrNull()?.medium ?: "",
-                url = animalsItemResponse?.url ?: "",
-                breeds = StringHelper.getBreed(animalsItemResponse?.breeds),
-                environment = EnvironmentModel.convertFromResponse(animalsItemResponse?.environment),
-                size = animalsItemResponse?.size ?: "",
-                species = animalsItemResponse?.species ?: "",
-                contact = ContactModel.convertFromResponse(animalsItemResponse?.contact),
-                name = animalsItemResponse?.name ?: "",
-                attributes = AttributesModel.convertFromResponse(animalsItemResponse?.attributes),
-                id = animalsItemResponse?.id.toString(),
-                publishedAt = animalsItemResponse?.publishedAt ?: "",
-                age = StringHelper.checkAge(animalsItemResponse?.age),
-                quickDescription = StringHelper.getPetQuickDescription(animalsItemResponse)
+                gender = from?.gender ?: "",
+                distance = from?.distance.toString(),
+                links = LinkModel.convertFromResponse(from?.links),
+                description = from?.description ?: "",
+                type = from?.type ?: "",
+                photoUrl = from?.photos?.firstOrNull()?.medium ?: "",
+                url = from?.url ?: "",
+                breeds = StringHelper.getBreed(from?.breeds),
+                environment = EnvironmentModel.convertFromResponse(from?.environment),
+                size = from?.size ?: "",
+                species = from?.species ?: "",
+                contact = ContactModel.convertFromResponse(from?.contact),
+                name = from?.name ?: "",
+                attributes = AttributesModel.convertFromResponse(from?.attributes),
+                id = from?.id.toString(),
+                publishedAt = from?.publishedAt ?: "",
+                age = StringHelper.checkAge(from?.age),
+                quickDescription = StringHelper.getPetQuickDescription(from)
             )
         }
     }
@@ -199,7 +200,7 @@ data class LinkModel(
         parcel.readString().toString()
     )
 
-    companion object {
+    companion object : ModelConverter<LinkModel, LinksResponse?> {
 
         @JvmField val CREATOR : Parcelable.Creator<LinkModel> = object : Parcelable.Creator<LinkModel> {
             override fun createFromParcel(parcel: Parcel): LinkModel {
@@ -211,10 +212,10 @@ data class LinkModel(
             }
         }
 
-        fun convertFromResponse(linksResponse: LinksResponse?) : LinkModel {
+        override fun convertFromResponse(from: LinksResponse?) : LinkModel {
             return LinkModel(
-                self = linksResponse?.self?.href ?: "",
-                organization = linksResponse?.organization?.href ?: ""
+                self = from?.self?.href ?: "",
+                organization = from?.organization?.href ?: ""
             )
         }
     }
@@ -245,7 +246,7 @@ data class EnvironmentModel(
         parcel.readString().toString()
     )
 
-    companion object {
+    companion object : ModelConverter<EnvironmentModel, EnvironmentResponse?> {
 
         @JvmField val CREATOR : Parcelable.Creator<EnvironmentModel> = object : Parcelable.Creator<EnvironmentModel> {
             override fun createFromParcel(parcel: Parcel): EnvironmentModel {
@@ -257,8 +258,8 @@ data class EnvironmentModel(
             }
         }
 
-        fun convertFromResponse(environmentResponse: EnvironmentResponse?) : EnvironmentModel {
-            return StringHelper.convertEnvironmentStrings(environmentResponse)
+        override fun convertFromResponse(from: EnvironmentResponse?) : EnvironmentModel {
+            return StringHelper.convertEnvironmentStrings(from)
         }
     }
 
@@ -289,7 +290,7 @@ data class ContactModel(
         parcel.readString().toString()
     )
 
-    companion object {
+    companion object : ModelConverter<ContactModel, ContactResponse?> {
         @JvmField val CREATOR : Parcelable.Creator<ContactModel> = object : Parcelable.Creator<ContactModel> {
             override fun createFromParcel(parcel: Parcel): ContactModel {
                 return ContactModel(parcel)
@@ -300,8 +301,8 @@ data class ContactModel(
             }
         }
 
-        fun convertFromResponse(contactResponse: ContactResponse?) : ContactModel {
-            return StringHelper.convertContactStrings(contactResponse)
+        override fun convertFromResponse(from: ContactResponse?) : ContactModel {
+            return StringHelper.convertContactStrings(from)
         }
     }
 
@@ -351,7 +352,7 @@ data class AttributesModel(
         return 0
     }
 
-    companion object {
+    companion object : ModelConverter<AttributesModel, AttributesResponse? >{
         @JvmField val CREATOR : Parcelable.Creator<AttributesModel> = object : Parcelable.Creator<AttributesModel> {
             override fun createFromParcel(parcel: Parcel): AttributesModel {
                 return AttributesModel(parcel)
@@ -362,8 +363,8 @@ data class AttributesModel(
             }
         }
 
-        fun convertFromResponse(attributesResponse: AttributesResponse?) : AttributesModel {
-            return StringHelper.convertAttributeStrings(attributesResponse)
+        override fun convertFromResponse(from: AttributesResponse?) : AttributesModel {
+            return StringHelper.convertAttributeStrings(from)
         }
     }
 

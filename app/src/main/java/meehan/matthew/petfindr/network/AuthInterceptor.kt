@@ -2,8 +2,6 @@ package meehan.matthew.petfindr.network
 
 import dagger.Lazy
 import kotlinx.coroutines.runBlocking
-import meehan.matthew.petfindr.model.remote.AuthResponse
-import meehan.matthew.petfindr.repository.CurrentPetRepository
 import meehan.matthew.petfindr.repository.TokenRepository
 import okhttp3.Interceptor
 import okhttp3.Response

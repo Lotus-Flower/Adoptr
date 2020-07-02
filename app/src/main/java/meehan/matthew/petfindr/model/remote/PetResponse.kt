@@ -3,8 +3,6 @@ package meehan.matthew.petfindr.model.remote
 import com.google.gson.annotations.SerializedName
 import com.google.gson.annotations.Expose
 
-
-
 data class PetResponse(
 
 	@field:SerializedName("pagination")
