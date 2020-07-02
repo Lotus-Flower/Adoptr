@@ -11,45 +11,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0ea6d0e2-1561-4faf-8513-f37c313b31ba" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/fileContent/fileContent.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/fileContent/fileContent.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/jarAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/taskHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/meehan/matthew/petfindr/data/remote/PetApiService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/meehan/matthew/petfindr/data/remote/api/PetApiService.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/meehan/matthew/petfindr/dependencyInjection/AppModule.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/meehan/matthew/petfindr/dependencyInjection/AppModule.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/meehan/matthew/petfindr/dependencyInjection/NetworkModule.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/meehan/matthew/petfindr/dependencyInjection/NetworkModule.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/meehan/matthew/petfindr/model/local/PetListModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/meehan/matthew/petfindr/model/local/PetListModel.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/meehan/matthew/petfindr/model/remote/PetResponse.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/meehan/matthew/petfindr/model/remote/PetResponse.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/meehan/matthew/petfindr/network/AuthInterceptor.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/meehan/matthew/petfindr/network/AuthInterceptor.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/meehan/matthew/petfindr/network/NetworkConstants.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/meehan/matthew/petfindr/network/NetworkConstants.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/meehan/matthew/petfindr/repository/CurrentPetRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/meehan/matthew/petfindr/repository/CurrentPetRepository.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/meehan/matthew/petfindr/repository/SavedPetRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/meehan/matthew/petfindr/repository/SavedPetRepository.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/meehan/matthew/petfindr/repository/TokenRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/meehan/matthew/petfindr/repository/TokenRepository.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/meehan/matthew/petfindr/utils/CustomBindings.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/meehan/matthew/petfindr/utils/CustomBindings.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/meehan/matthew/petfindr/utils/ModelConverter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/meehan/matthew/petfindr/utils/ModelConverter.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/meehan/matthew/petfindr/utils/UrlHelper.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/meehan/matthew/petfindr/utils/UrlHelper.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/meehan/matthew/petfindr/view/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/meehan/matthew/petfindr/view/MainActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/meehan/matthew/petfindr/view/MainPagerAdapter.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/meehan/matthew/petfindr/view/PetDetailsFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/meehan/matthew/petfindr/view/PetDetailsFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/meehan/matthew/petfindr/view/ProfileFragment.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/meehan/matthew/petfindr/view/SavedPetsFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/meehan/matthew/petfindr/view/SavedPetsFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/meehan/matthew/petfindr/view/SettingsFragment.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_pet_detail.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_pet_details.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_pet_details.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_profile.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/view_pet_description_card.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/view_pet_photo_card.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/assetWizardSettings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/assetWizardSettings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -78,26 +42,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/meehan/matthew/petfindr/view/PetDetailsFragment.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="290">
-              <caret line="37" column="4" selection-start-line="37" selection-end-line="39" selection-end-column="5" />
-              <folding>
-                <element signature="e#38#804#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/meehan/matthew/petfindr/view/SavedPetsFragment.kt">
+        <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+          <provider editor-type-id="android-manifest" />
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="516">
-              <caret line="44" column="33" lean-forward="true" selection-start-line="44" selection-start-column="33" selection-end-line="44" selection-end-column="33" />
-              <folding>
-                <element signature="e#38#902#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="165">
+              <caret line="11" column="47" selection-start-line="11" selection-start-column="47" selection-end-line="11" selection-end-column="47" />
             </state>
           </provider>
         </entry>
@@ -145,8 +95,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/src/main/java/meehan/matthew/petfindr/data/local/BaseSharedPreferencesSetService.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/meehan/matthew/petfindr/data/local/BaseSharedPreferencesService.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/meehan/matthew/petfindr/data/local/SharedPreferencesStringService.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/meehan/matthew/petfindr/data/local/SharedPreferencesSetService.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/meehan/matthew/petfindr/repository/PetRepository.kt" />
@@ -196,6 +144,8 @@
         <option value="$PROJECT_DIR$/app/src/main/res/menu/menu.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/meehan/matthew/petfindr/view/PetDetailsFragment.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/meehan/matthew/petfindr/view/SavedPetsFragment.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/colors.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
       </list>
     </option>
   </component>
@@ -212,7 +162,57 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
+      <pane id="AndroidView">
+        <subPane>
+          <expand>
+            <path>
+              <item name="petfindr" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+            </path>
+            <path>
+              <item name="petfindr" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="manifests" type="f94875db:AndroidManifestsGroupNode" />
+            </path>
+            <path>
+              <item name="petfindr" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="res" type="d4f16f75:AndroidResFolderNode" />
+            </path>
+            <path>
+              <item name="petfindr" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="res" type="d4f16f75:AndroidResFolderNode" />
+              <item name="drawable" type="ddeffd01:AndroidResFolderTypeNode" />
+            </path>
+            <path>
+              <item name="petfindr" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="res" type="d4f16f75:AndroidResFolderNode" />
+              <item name="mipmap" type="ddeffd01:AndroidResFolderTypeNode" />
+            </path>
+            <path>
+              <item name="petfindr" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="res" type="d4f16f75:AndroidResFolderNode" />
+              <item name="mipmap" type="ddeffd01:AndroidResFolderTypeNode" />
+              <item name="ic_paw_foreground" type="c431d0b8:AndroidResGroupNode" />
+            </path>
+            <path>
+              <item name="petfindr" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="res" type="d4f16f75:AndroidResFolderNode" />
+              <item name="mipmap" type="ddeffd01:AndroidResFolderTypeNode" />
+              <item name="ic_paw_round" type="c431d0b8:AndroidResGroupNode" />
+            </path>
+            <path>
+              <item name="petfindr" type="1abcf292:AndroidViewProjectNode" />
+              <item name="Gradle Scripts" type="ae0cef3a:AndroidBuildScriptsGroupNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
@@ -354,10 +354,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="946" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
-      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.15140416" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.15140416" />
       <window_info id="Structure" order="2" side_tool="true" />
       <window_info id="Build Variants" order="3" side_tool="true" />
       <window_info id="Image Layers" order="4" />
@@ -369,7 +368,7 @@
       <window_info anchor="bottom" id="Logcat" order="1" weight="0.3290398" />
       <window_info anchor="bottom" id="TODO" order="2" weight="0.3290398" />
       <window_info anchor="bottom" id="Android Profiler" order="3" weight="0.96487117" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="4" visible="true" weight="0.3290398" />
+      <window_info anchor="bottom" id="Terminal" order="4" visible="true" weight="0.3290398" />
       <window_info anchor="bottom" id="Event Log" order="5" side_tool="true" />
       <window_info anchor="bottom" id="Build" order="6" weight="0.3091335" />
       <window_info anchor="bottom" id="Run" order="7" />
@@ -492,99 +491,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/meehan/matthew/petfindr/dependencyInjection/ViewModelModule.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="7" lean-forward="true" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
-          <folding>
-            <element signature="e#53#347#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/meehan/matthew/petfindr/model/remote/AuthResponse.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="11" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/meehan/matthew/petfindr/network/AuthInterceptor.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-          <folding>
-            <element signature="e#41#206#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/meehan/matthew/petfindr/dependencyInjection/NetworkModule.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="51" column="43" lean-forward="true" selection-start-line="51" selection-start-column="43" selection-end-line="51" selection-end-column="43" />
-          <folding>
-            <element signature="e#53#619#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/meehan/matthew/petfindr/utils/CoroutineUtil.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="7" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/meehan/matthew/petfindr/utils/CustomBindings.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-          <folding>
-            <element signature="e#39#149#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/meehan/matthew/petfindr/utils/EnvironmentConstants.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/meehan/matthew/petfindr/utils/SingleLiveEvent.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="7" lean-forward="true" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
-          <folding>
-            <element signature="e#39#267#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/meehan/matthew/petfindr/utils/StringHelper.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="7" lean-forward="true" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
-          <folding>
-            <element signature="e#39#298#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/meehan/matthew/petfindr/view/SettingsFragment.kt" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/meehan/matthew/petfindr/utils/UrlHelper.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="70" selection-start-line="8" selection-start-column="70" selection-end-line="8" selection-end-column="70" />
-          <folding>
-            <element signature="e#39#117#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/meehan/matthew/petfindr/view/ProfileFragment.kt" />
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_profile.xml" />
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/view_pet_description_card.xml" />
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/view_pet_photo_card.xml" />
@@ -609,9 +515,6 @@
       <provider editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/transition/shared_element_transition.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/colors.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values/dimens.xml">
@@ -842,11 +745,59 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/meehan/matthew/petfindr/view/SavedPetsFragment.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="516">
-          <caret line="44" column="33" lean-forward="true" selection-start-line="44" selection-start-column="33" selection-end-line="44" selection-end-column="33" />
+        <state relative-caret-position="43">
+          <caret line="68" column="13" lean-forward="true" selection-start-line="68" selection-start-column="13" selection-end-line="68" selection-end-column="13" />
           <folding>
             <element signature="e#38#902#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/colors.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="37" selection-start-line="3" selection-start-column="37" selection-end-line="3" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/ic_paw.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/ic_paw.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/ic_paw.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_paw.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/ic_paw_foreground.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/ic_paw_foreground.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/ic_paw_foreground.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_paw_foreground.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/ic_paw_foreground.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/mipmap-anydpi-v26/ic_paw.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/ic_paw.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider editor-type-id="android-manifest" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="47" selection-start-line="11" selection-start-column="47" selection-end-line="11" selection-end-column="47" />
         </state>
       </provider>
     </entry>
